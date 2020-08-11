@@ -78,8 +78,7 @@ public:
      */
     DBConnector(int dbId, const std::string &hostname, int port, unsigned int timeout);
     DBConnector(int dbId, const std::string &unixPath, unsigned int timeout);
-    DBConnector(const std::string &dbName, unsigned int timeout, bool isTcpConn = false);
-    DBConnector(const std::string &dbName, unsigned int timeout, bool isTcpConn, const std::string &nameSpace);
+    DBConnector(const std::string &dbName, unsigned int timeout, bool isTcpConn = false, const std::string &nameSpace = EMPTY_NAMESPACE);
 
     ~DBConnector();
 

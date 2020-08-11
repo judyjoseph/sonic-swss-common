@@ -386,12 +386,6 @@ DBConnector::DBConnector(const string& dbName, unsigned int timeout, bool isTcpC
     select(this);
 }
 
-DBConnector::DBConnector(const string& dbName, unsigned int timeout, bool isTcpConn)
-    : DBConnector(dbName, timeout, isTcpConn, EMPTY_NAMESPACE)
-{
-    // Empty contructor
-}
-
 redisContext *DBConnector::getContext() const
 {
     return m_conn;
